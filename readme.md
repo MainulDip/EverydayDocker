@@ -82,18 +82,21 @@ docker ps --format="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.
 
 
 assaign format process to a variable named FORMAT
-Note: "export" will work only unix shells.
-Tips: Set git bash as vscode's default terminal. ctrl+shift+p and search for "select default profile" for terminal and select "Git Bash"
+
 ```sh
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 ```
+
+Note: "export" will work only unix shells.
+Tips: Set git bash as vscode's default terminal. ctrl+shift+p and search for "select default profile" for terminal and select "Git Bash"
 
 Returns no-formatted processess
 ```sh
 docker ps
 ```
 
-Returns the formated processes that had been assinged previously
+Returns the formated processes console that had been assinged previously by $FORMAT variable
+
 ```sh
 docker ps --format=$FORMAT
 ```
