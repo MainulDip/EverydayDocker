@@ -101,6 +101,12 @@ Returns the formated processes console that had been assinged previously by $FOR
 docker ps --format=$FORMAT
 ```
 
+## Naming and Formatting Processess:
+Allows sharing of data, files and folders.
+=> Between host and containers
+=> Between containers
+
+
 ## Notes:
 
 ___
