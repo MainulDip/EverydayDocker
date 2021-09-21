@@ -74,6 +74,12 @@ Naming Container
 ```sh
 docker run --name customName -d -p 7000:80 image:tag
 ```
+And start/stop "customName" container by
+
+```sh
+docker start customName
+docker stop customName
+```
 
 Initiate format on the fly
 ```sh
@@ -105,6 +111,17 @@ docker ps --format=$FORMAT
 Allows sharing of data, files and folders.
 => Between host and containers
 => Between containers
+
+```sh
+docker run --name volumeTest -v $(pwd):/usr/share/nginx/html:ro -d -p 4000:80 nginx:latest
+```
+
+For PowerShell
+```sh
+docker run --name wtests --volume ${pwd}:/usr/share/nginx/html -d -p 4000:80 nginx:latest
+```
+
+#challenge => git bash volume mounting [ resolve the empty ;c directory issues]
 
 
 ## Notes:
