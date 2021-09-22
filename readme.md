@@ -116,12 +116,17 @@ Allows sharing of data, files and folders.
 docker run --name volumeTest -v $(pwd):/usr/share/nginx/html:ro -d -p 4000:80 nginx:latest
 ```
 
-For PowerShell
+=>For PowerShell on windows 10
 ```sh
 docker run --name wtests --volume ${pwd}:/usr/share/nginx/html -d -p 4000:80 nginx:latest
 ```
 
+=>For Gitbash on windows 10
 #challenge => git bash volume mounting [ resolve the empty ;c directory issues]
+
+```sh
+docker run --name wtests --volume /$(pwd):/usr/share/nginx/html -d -p 4000:80 nginx:latest 
+```
 
 
 ## Notes:
