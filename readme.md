@@ -127,6 +127,7 @@ docker run --name wtests --volume ${pwd}:/usr/share/nginx/html -d -p 4000:80 ngi
 ```sh
 docker run --name wtests --volume /$(pwd):/usr/share/nginx/html -d -p 4000:80 nginx:latest 
 ```
+Ref: https://stackoverflow.com/questions/50608301/docker-mounted-volume-adds-c-to-end-of-windows-path-when-translating-from-linux
 
 
 ## Notes:
