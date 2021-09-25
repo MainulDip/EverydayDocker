@@ -74,7 +74,7 @@ Naming Container
 ```sh
 docker run --name customName -d -p 7000:80 image:tag
 ```
-And start/stop "customName" container by
+And start/stop "customName" container by this code
 
 ```sh
 docker start customName
