@@ -130,6 +130,15 @@ docker run --name wtests --volume /$(pwd):/usr/share/nginx/html -d -p 4000:80 ng
 Ref: https://stackoverflow.com/questions/50608301/docker-mounted-volume-adds-c-to-end-of-windows-path-when-translating-from-linux
 
 
+=> Enter into the live containers
+```sh
+docker exec -it wtests bash
+la -la
+cd usr/share/nginx/html/
+ls -la
+touch about.html
+```
+=> Exit from interactive mode => ctrl+d
 ## Notes:
 
 ___
