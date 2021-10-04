@@ -4,7 +4,7 @@ ___
 
 This is a list and lite documentation of everyday use docker commands :)
 
-## Container & Image 
+## Container & Image  
 
 ___
 
