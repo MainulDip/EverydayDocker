@@ -146,6 +146,20 @@ cd ./usr/share/nginx/html/
 ```
 And inspect internal file structure and ctrl+d to exit
 
+### Sharing Volume Between Cotainers
+___
+--volumes-from <containername> is used to share a mounted volume with another container
+
+```sh
+docker run --name newsite --volumes-from voulumeTest -d -p 7000:80 nginx:latest
+```
+
+### DockerFile : Build Own Image
+___
+
+
+
+
 New Code
 
 =======
