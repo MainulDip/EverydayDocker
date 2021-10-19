@@ -131,9 +131,20 @@ docker run --name wtests --volume /$(pwd):/usr/share/nginx/html -d -p 4000:80 ng
 Ref: https://stackoverflow.com/questions/50608301/docker-mounted-volume-adds-c-to-end-of-windows-path-when-translating-from-linux
 
 
-## Notes:
+## Inspecting Docker Internals With Voulme Mounting:
 
 ___
+
+
+```sh
+docker exec -it volumeTest bash
+```
+
+Then move to mounted volume by
+```sh
+cd ./usr/share/nginx/html/
+```
+And inspect internal file structure and ctrl+d to exit
 
 New Code
 
