@@ -304,6 +304,13 @@ ls -la
 touch about.html
 ```
 => Exit from interactive mode => ctrl+d
+
+
+### Sharing Volume Between Multiple Containers
+
+```sh
+sudo docker run --name wsitecopy --volumes-from wtests -d -p 7000:80 nginx:latest
+```
 ## Notes:
 
 ___
