@@ -311,6 +311,27 @@ touch about.html
 ```sh
 sudo docker run --name wsitecopy --volumes-from wtests -d -p 7000:80 nginx:latest
 ```
+### DockerFile: Build Image
+___
+# Build from nginx base Image
+FROM nginx:latest
+# Share Everything from this (.) directory and mount it to '/usr/share/nginx/html'
+ADD . /usr/share/nginx/html
+# Build the image | docker build --help
+docker build -t name:tag .
+It will build a docker image from this/current (.) directory
+```sh
+docker build --tag customsite:latest .
+```
+
+Build Container From This
+```sh
+docker run --name customsitecon -d -p 7000:80 customsite:latest
+```
+
+### Node/Express Dokerization
+
+
 ## Notes:
 
 ___
