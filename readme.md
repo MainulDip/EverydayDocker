@@ -335,6 +335,12 @@ docker build -t user-service-api:latest .
 ```
 => build user-service-api image using the Dockerfile from this (.) directory
 
+
+```sh
+sudo docker run --name user-api -d -p 7000:4000 user-service-api:latest
+```
+Note: Map Node/Express Port 4000 With Docker's Port 7000
+
 ## Notes:
 
 ___
