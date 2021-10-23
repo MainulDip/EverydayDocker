@@ -330,7 +330,10 @@ docker run --name customsitecon -d -p 7000:80 customsite:latest
 ```
 
 ### Node/Express Dokerization
-
+```sh
+docker build -t user-service-api:latest .
+```
+=> build user-service-api image using the Dockerfile from this (.) directory
 
 ## Notes:
 
