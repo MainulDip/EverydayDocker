@@ -52,6 +52,7 @@ docker rm [CONTAINER-ID]/[NAME]
 docker rm $(docker ps -aq)
 docker rm -f $(docker ps -aq)
 ```
+Note: Try to Fix "docker rm -f $(docker ps -aq)" not running on linux
 
 Export/Map Single or Multiple Port/s
 ```sh
