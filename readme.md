@@ -343,6 +343,7 @@ sudo docker run --name user-api -d -p 7000:4000 user-service-api:latest
 Note: Map Node/Express Port 4000 With Docker's Port 7000
 
 ### Creating Layer in Dockerfile for caching
+=> If Dockerfile is not layerd/arranged correctly (not include package.json and package.lock.json inside working directory) docker will download every packages evenif no new package was added/removed from package.json. So add package*.json and run npm install before adding the directory to working directory (ADD . .)
 
 ## Notes:
 
