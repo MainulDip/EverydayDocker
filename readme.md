@@ -19,27 +19,13 @@ docker run -d image:tag
 docker container ls
 docker ps
 docker ps -aq
-
-
-
-
-
-
 docker ps \\ returns no-formatted processess
 docker ps --format=$FORMAT \\ Returns the formated processes that had been assinged previously
 ```
-
-Then Start The Node Server In Watch Mode By Running
-
+### Removing Image
 ```sh
-npm run start
+docker image rm [OPTIONS] IMAGE [IMAGE...]
 ```
-
-After finishing development run
-```sh
-npm run build
-```
-
 ## Expose port/s & Container Management
 
 ___
