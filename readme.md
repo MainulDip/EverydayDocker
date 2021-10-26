@@ -25,6 +25,8 @@ docker ps --format=$FORMAT \\ Returns the formated processes that had been assin
 ### Removing Image
 ```sh
 docker image rm [OPTIONS] IMAGE [IMAGE...]
+
+docker image rm node:lts-alpine
 ```
 ## Expose port/s & Container Management
 
@@ -343,8 +345,18 @@ CMD node index.js
 ### Different Linux Distro => Alpine
 Pulling alpine image
 ```sh
-sudo docker pull node:lts-alpine
+sudo docker pull node:alpine
+docker pull nginx:alpine
 ```
+$ docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED       SIZE
+user-service-api   latest    f75610179213   9 hours ago   909MB | node:latest
+node               alpine    ea83436d30c8   3 days ago    110MB
+customsite         latest    09bb10498684   4 days ago    135MB
+nginx              latest    f8f4ffc8092c   3 weeks ago   133MB
+nginx              alpine    513f9a9d8748   6 weeks ago   22.9MB
+
+Note: Alpine based versions are smaller than latest
 
 
 ## Notes:
