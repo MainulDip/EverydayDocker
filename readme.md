@@ -358,7 +358,7 @@ nginx              alpine    513f9a9d8748   6 weeks ago   22.9MB
 
 Note: Alpine based versions are smaller than latest
 
-
+### Tags and Versioning:
 ## Notes:
 
 ___
