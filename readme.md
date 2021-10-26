@@ -359,6 +359,39 @@ nginx              alpine    513f9a9d8748   6 weeks ago   22.9MB
 Note: Alpine based versions are smaller than latest
 
 ### Tags and Versioning:
+Use exact version in dockerfile's FROM command to avoid breaking change effect with the custom build.
+=> Creating Tag
+```sh
+docker tag customsite:latest customsite:1
+```
+
+
+### Docker Registries
+=> Stores and distribute Docker images.
+=> CD/CI pipeline
+=> To store your own registry, use Dockerhub | Amazon ECR | quay.io documentation.
+
+### Inspecting and logging Docker Images/Containers
+```sh
+docker inspect nginx:latest
+docker inspect customsitecon:latest
+```
+```sh
+docker logs <containerid>
+```
+
+### Bash into containers
+```sh
+docker exec --help
+docker exec -it <containername/id> <bash-directory>
+```
+Note: to get the bash directory of a running container inspect that first
+    and figuire out the bash directory.
+
+```sh
+docker exec -it <running-container-name/id> /bin/sh
+````
+
 ## Notes:
 
 ___
