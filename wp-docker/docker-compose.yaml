@@ -30,3 +30,8 @@ services: # required
       WORDPRESS_DB_NAME: wordpress
     networks:
       - wpsite
+
+networks:
+  wpsite:
+volumes:
+  db_data:

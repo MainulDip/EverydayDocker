@@ -1,2 +1,4 @@
 node_modules
 package-lock.json
+wp-docker/*
+!wp-docker/docker-compose.yaml
