@@ -7,3 +7,8 @@
 Issues:
 
 => Difference between docker compose and dockerfile
+
+```sh
+docker-compose up
+docker-compose down
+```
