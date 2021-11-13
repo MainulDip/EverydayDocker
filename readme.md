@@ -28,8 +28,8 @@ docker image rm [OPTIONS] IMAGE [IMAGE...]
 
 docker image rm node:lts-alpine
 ```
-## Expose port/s & Container Management
-
+## port/s & Container Management
+=> Container port and host machine ports are different. To access container port, binding them is nessery. If no machine port is assaigned, container will be inaccessable. 
 ___
 
 Stop(stop) and Remove(rm)
