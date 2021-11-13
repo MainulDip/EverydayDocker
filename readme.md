@@ -396,6 +396,9 @@ docker exec -it <running-container-name/id> /bin/sh
 
 ___
 
+### Docker Network
+=> Isolated Network. Containers can connect within the same network using their container name. And other service can connect with them using port number.
+
 New Code
 
 #### Happy Coding :) 
