@@ -97,10 +97,13 @@ Returns the formated processes console that had been assinged previously by $FOR
 docker ps --format=$FORMAT
 ```
 
-## Naming and Formatting Processess:
+## Naming Container | Volumes | Networks:
 Allows sharing of data, files and folders.
 => Between host and containers
-=> Between containers
+```sh
+docker volume ls
+docker network ls
+```
 
 ```sh
 docker run --name volumeTest -v $(pwd):/usr/share/nginx/html:ro -d -p 4000:80 nginx:latest
