@@ -40,6 +40,14 @@ mongo-express:1.0.0-alpha.4
 
 Note: Success using the specified container on N4000 CPU Architecture (Low End)
 
+## Bash into mongo container
+```sh
+docker inspect my-mongo-con
+docker exec -it my-mongo-con bash
+mongo -u admin -p password --shell
+show dbs
+``` 
+
 ### Connect Node Servers:
 ```sh
 
