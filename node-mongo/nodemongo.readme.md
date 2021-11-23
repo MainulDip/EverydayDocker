@@ -52,3 +52,9 @@ show dbs
 ```sh
 
 ```
+
+### Inspect letest acti
+```sh
+docker logs container_name/id | tail
+docker logs container_name/id -f
+```
