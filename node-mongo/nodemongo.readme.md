@@ -58,3 +58,8 @@ show dbs
 docker logs container_name/id | tail
 docker logs container_name/id -f
 ```
+
+### Docker Compose:
+```sh
+docker-compose -f mongo-docker-compose.yaml -d
+```
