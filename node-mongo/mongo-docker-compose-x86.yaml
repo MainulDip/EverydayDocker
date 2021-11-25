@@ -8,7 +8,7 @@ services:
     networks:
      - my-mongodb-network
     volumes:
-      - my-mongodb-volume
+      - my-mongodb-volume:/data/db # when restarts, data on my-mongodb-volume will be copied to /data/db
     environment:
      - MONGO_INITDB_ROOT_USERNAME=admin
      - MONGO_INITDB_ROOT_PASSWORD=password
@@ -30,3 +30,4 @@ networks:
  my-mongodb-network:
 volumes:
   my-mongodb-volume:
+    driver: local
