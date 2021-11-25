@@ -1,32 +1,37 @@
 version: '3.9'
 services:
-  mongodb:
-    #container_name: my-mongodb-con
+  my-mongodb-con:
+    container_name: my-mongodb-con
     image: mongo:4.4.10-focal
     ports:
      - 27017:27017
     networks:
      - my-mongodb-network
-    #volumes:
-    #  - my-mongo-volume
+    volumes:
+     - my-mongo-volume:/data/db
     environment:
      - MONGO_INITDB_ROOT_USERNAME=admin
      - MONGO_INITDB_ROOT_PASSWORD=password
+    restart: always
   my-mongodb-express-con:
-    #container_name: my-mongodb-express-con
+    container_name: my-mongodb-express-con
     image: mongo-express:1.0.0-alpha.4
     ports:
-     - 8080:8081
+     - 7000:8081
     networks:
      - my-mongodb-network
-    #depends_on:
-    # - mongodb
+    volumes:
+      - my-mongo-volume:/data/db
+    depends_on:
+     - my-mongodb-con
     environment:
      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
-     - ME_CONFIG_MONGODB_SERVER=mongodb
+     - ME_CONFIG_MONGODB_SERVER=my-mongodb-con
+    restart: always
 
 networks:
  my-mongodb-network:
-#volumes:
-#  my-mongo-volume:
+volumes:
+ my-mongo-volume:
+  driver: local
