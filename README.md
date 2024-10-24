@@ -9,7 +9,7 @@ This is a list and lite documentation of everyday use docker commands :)
 
 ___
 
-Container is a running instance of an image. 
+Container is a running instance of an image
 
 ```sh
 docker images \\ will show local downloaded images

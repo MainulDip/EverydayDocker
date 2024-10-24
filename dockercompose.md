@@ -4,7 +4,7 @@
 
 
 
-Issues:
+Issues
 
 => Difference between docker compose and dockerfile
 
