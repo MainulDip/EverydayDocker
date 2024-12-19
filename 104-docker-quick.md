@@ -61,3 +61,31 @@ Dockerfile
 ### Networks:
 
 ### Volumes
+
+### Containers and shell:
+Using shell, interactions with containers are established. When a container is started, it has to run a shell to interpret and execute the commands either described in the Dockerfile or passed when the container is run.
+
+Shell can be 
+`bash` (Bourne Again Shell) (default), 
+`sh` (Bourne Shell) or 
+`zsh`(Z Shell)
+
+* Shell execution `exec` on an already running container
+`docker exec -it <container_id> /bin/bash` to execute a bash shell using interactive mode
+`docker exec -d <container_id> <command>` for detach mode
+
+* Initiating new container and interactive terminal for debugging or testing, configuration analysis
+`docker run -it <image_name> /bin/bash`
+
+https://www.tutorialspoint.com/docker/docker_containers_and_shells.htm
+
+### Running Docker as non-root user:
+Running containers as non-root user is a good security measure. By default, containers are run as root user. 
+
+Create Non-Root Users in Dockerfile using the USER instruction
+
+```Dockerfile
+FROM ubuntu:latest
+RUN useradd -m nonrootuser
+USER nonrootuser
+```

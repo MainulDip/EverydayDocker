@@ -137,3 +137,41 @@ WORKDIR /app
 # Set the entry point
 CMD ["python", "app.py"]
 ```
+
+### Frequently used commands/instructions in Dockerfile:
+`FROM`	Specifying the base image you're building from
+`RUN`	Run a command on a new layer of the current image and commit
+`COPY`	Copy files or directories from the host filesystem into the image filesystem
+`WORKDIR`	Set the working directory for any subsequent instructions.
+`ENV`	It sets the environment variables
+`EXPOSE`	Inform Docker that the container has interests in specific network ports at runtime
+`CMD`	Provides the default command and/or parameters for the Container
+`ENTRYPOINT`	This configures a container to run as an executable
+`VOLUME`	Creates a mount point with the specified path and marks it as holding externally mounted volumes
+`USER`	Sets the username or UID to use when running the image
+
+```Dockerfile
+# Use the official Node.js image as a base
+FROM node:14
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose port 3000 to the outside world
+EXPOSE 3000
+
+# Set environment variables
+ENV NODE_ENV=production
+
+# Default command to run when the container starts
+CMD ["node", "index.js"]
+```
