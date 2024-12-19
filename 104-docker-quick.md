@@ -58,9 +58,13 @@ Dockerfile
 
 
 
+### Data Persistence & Volumes:
+https://www.tutorialspoint.com/docker/docker_storage.htm
+
 ### Networks:
 
-### Volumes
+### Volumes:
+https://www.tutorialspoint.com/docker/docker_volumes.htm
 
 ### Containers and shell:
 Using shell, interactions with containers are established. When a container is started, it has to run a shell to interpret and execute the commands either described in the Dockerfile or passed when the container is run.
@@ -89,3 +93,6 @@ FROM ubuntu:latest
 RUN useradd -m nonrootuser
 USER nonrootuser
 ```
+
+### Container Linking:
+https://www.tutorialspoint.com/docker/docker_container_linking.htm
